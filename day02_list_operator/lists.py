@@ -59,6 +59,11 @@ def clear_list(lst):
     lst.clear()
     return lst
 
+def membership_check(lst, item):
+    if item in lst:
+        return f"'{item}' exists in the list"
+    return f"'{item}' does NOT exist in the list"
+
 
 default_list = ["start", "stop", "pause"]
 print(default_list)
@@ -66,4 +71,5 @@ print(append_list(default_list, "reset"))
 print(remove_list(default_list, "start"))
 print(extend_list(default_list, ["run", "walk"]))
 print(insert_list(default_list, 2, "jump"))
-
+print(membership_check(default_list, "stop"))
+print(membership_check(default_list, "reset"))
